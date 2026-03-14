@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>[ SwagBot ] </title>
+
+<style>
+
+body{
+background:#050505;
+color:#cfcfcf;
+font-family:Courier New, monospace;
+margin:0;
+padding:0;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+.ascii{
+white-space:pre;
+color:#ff2b2b;
+text-align:center;
+font-size:13px;
+margin-bottom:25px;
+}
+
+.section{
+background:#0b0b0b;
+border:1px solid #1f1f1f;
+padding:18px;
+margin-bottom:18px;
+}
+
+.title{
+color:#ff2b2b;
+margin-bottom:8px;
+}
+
+.line{
+border-top:1px solid #1f1f1f;
+margin:15px 0;
+}
+
+a{
+color:#ff2b2b;
+text-decoration:none;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+.small{
+color:#8a8a8a;
+font-size:13px;
+}
+.songlist{
+margin-top:10px;
+}
+
+.song{
+padding:8px;
+border-bottom:1px solid #1f1f1f;
+cursor:pointer;
+color:#cfcfcf;
+}
+
+.song:hover
+.radioinfo{
+margin-bottom:10px;
+color:#999;
+font-size:13px;
+}
+
+#player{
+margin-top:15px;
+}
+
+</style>
+<script>
+    function playSong(id){
+
+document.getElementById("player").innerHTML = `
+
+<iframe style="border-radius:12px"
+src="https://open.spotify.com/embed/track/${id}"
+width="100%"
+height="152"
+frameborder="0"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+loading="lazy">
+</iframe>
+`
+
+}
+
+</script>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="ascii">
+███████╗██╗    ██╗ █████╗  ██████╗ 
+██╔════╝██║    ██║██╔══██╗██╔════╝ 
+███████╗██║ █╗ ██║███████║██║  ███╗
+╚════██║██║███╗██║██╔══██║██║   ██║
+███████║╚███╔███╔╝██║  ██║╚██████╔╝
+╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝ ╚═════╝ 
+
+swagbot.dev
+
+</div>
+
+<div class="section">
+
+<div class="title">[ about ]</div>
+
+4swag working on sawg bot
+<br>
+not here for attention.
+<br>
+not here for bots.
+<br>
+just playing the game Better.
+
+</div>
+
+<div class="section">
+
+<div class="title">[ info ]</div>
+
+names: 4swag
+<br>
+styles: hvh
+<br>
+games: cs2
+<br>
+status: Goated
+<br>
+Cheats in use :  MemeSense, NeverLose, Swagbot?
+</div>
+
+<div class="section">
+
+<div class="title">[ presence ]</div>
+
+steam: <a href="https://steamcommunity.com/id/4swag/">4swag</a>
+<br>
+discord: 4swag
+<br>
+telegram: Coming soon...
+
+<div class="line"></div>
+
+
+</span>
+
+</div>
+<div class="section">
+
+<div class="title">[ radio ]</div>
+
+<div class="radioinfo">
+swagbot  — playlist
+</div>
+
+<iframe
+style="border-radius:12px"
+src="https://open.spotify.com/embed/playlist/3JhcwRx5mZJkmUkyaJDCSr"
+width="100%"
+height="352"
+frameborder="0"
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+loading="lazy">
+</iframe>
+<span class="small">
+swagbot.dev
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="player"></div>
+
+</div>
+
+</div>
+
+</body>
+</html>
