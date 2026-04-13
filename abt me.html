@@ -1,201 +1,71 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>[ SwagBot ] </title>
-
-<style>
-
-body{
-background:#050505;
-color:#cfcfcf;
-font-family:Courier New, monospace;
-margin:0;
-padding:0;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-padding:30px;
-}
-
-.ascii{
-white-space:pre;
-color:#ff2b2b;
-text-align:center;
-font-size:13px;
-margin-bottom:25px;
-}
-
-.section{
-background:#0b0b0b;
-border:1px solid #1f1f1f;
-padding:18px;
-margin-bottom:18px;
-}
-
-.title{
-color:#ff2b2b;
-margin-bottom:8px;
-}
-
-.line{
-border-top:1px solid #1f1f1f;
-margin:15px 0;
-}
-
-a{
-color:#ff2b2b;
-text-decoration:none;
-}
-
-a:hover{
-text-decoration:underline;
-}
-
-.small{
-color:#8a8a8a;
-font-size:13px;
-}
-.songlist{
-margin-top:10px;
-}
-
-.song{
-padding:8px;
-border-bottom:1px solid #1f1f1f;
-cursor:pointer;
-color:#cfcfcf;
-}
-
-.song:hover
-.radioinfo{
-margin-bottom:10px;
-color:#999;
-font-size:13px;
-}
-
-#player{
-margin-top:15px;
-}
-
-</style>
-<script>
-    function playSong(id){
-
-document.getElementById("player").innerHTML = `
-
-<iframe style="border-radius:12px"
-src="https://open.spotify.com/embed/track/${id}"
-width="100%"
-height="152"
-frameborder="0"
-allowfullscreen=""
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-loading="lazy">
-</iframe>
-`
-
-}
-
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>swagbot.dev // Console Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body data-theme="info">
+  <div class="bg-layer" aria-hidden="true"></div>
 
-<body>
+  <main class="dashboard" aria-label="Personal console dashboard">
+    <header class="topbar glass">
+      <div>
+        <p class="system-label">USER PROFILE SYSTEM</p>
+        <h1>4swag // swagbot.dev</h1>
+      </div>
+      <p class="status-pill">STATUS: ONLINE · CS2 SESSION READY</p>
+    </header>
 
-<div class="container">
+    <section class="menu-wrap" aria-label="Main dashboard sections">
+      <div id="tileRail" class="tile-rail" role="tablist" aria-label="Console menu rail">
+        <button class="tile is-active" role="tab" data-key="info" aria-selected="true">
+          <span class="tile-kicker">01</span>
+          <span class="tile-title">Info</span>
+          <span class="tile-sub">identity + vibe</span>
+        </button>
+        <button class="tile" role="tab" data-key="links" aria-selected="false">
+          <span class="tile-kicker">02</span>
+          <span class="tile-title">Links</span>
+          <span class="tile-sub">where to tap in</span>
+        </button>
+        <button class="tile" role="tab" data-key="music" aria-selected="false">
+          <span class="tile-kicker">03</span>
+          <span class="tile-title">Music</span>
+          <span class="tile-sub">rotation + influence</span>
+        </button>
+        <button class="tile" role="tab" data-key="presence" aria-selected="false">
+          <span class="tile-kicker">04</span>
+          <span class="tile-title">Presence</span>
+          <span class="tile-sub">handles + scene</span>
+        </button>
+        <button class="tile" role="tab" data-key="favorites" aria-selected="false">
+          <span class="tile-kicker">05</span>
+          <span class="tile-title">Favorites</span>
+          <span class="tile-sub">games + phrases</span>
+        </button>
+        <button class="tile" role="tab" data-key="underground" aria-selected="false">
+          <span class="tile-kicker">06</span>
+          <span class="tile-title">Scene / Underground</span>
+          <span class="tile-sub">coded language</span>
+        </button>
+      </div>
+    </section>
 
-<div class="ascii">
-███████╗██╗    ██╗ █████╗  ██████╗ 
-██╔════╝██║    ██║██╔══██╗██╔════╝ 
-███████╗██║ █╗ ██║███████║██║  ███╗
-╚════██║██║███╗██║██╔══██║██║   ██║
-███████║╚███╔███╔╝██║  ██║╚██████╔╝
-╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝ ╚═════╝ 
+    <section class="detail-panel glass" aria-live="polite">
+      <p id="detailLabel" class="detail-label">INFO MODULE</p>
+      <h2 id="detailTitle">4swag / personal signal</h2>
+      <p id="detailCopy" class="detail-copy"></p>
+      <div id="detailItems" class="detail-items"></div>
+    </section>
 
-swagbot.dev
+    <footer class="footer glass">
+      <p>NAV: ← / → to move • Enter to open links • Esc to reset</p>
+      <p id="footerStamp">swagbot.dev // custom dashboard</p>
+    </footer>
+  </main>
 
-</div>
-
-<div class="section">
-
-<div class="title">[ about ]</div>
-
-4swag working on sawg bot
-<br>
-not here for attention.
-<br>
-not here for bots.
-<br>
-just playing the game Better.
-
-</div>
-
-<div class="section">
-
-<div class="title">[ info ]</div>
-
-names: 4swag
-<br>
-styles: hvh
-<br>
-games: cs2
-<br>
-status: Goated
-<br>
-Cheats in use :  MemeSense, NeverLose, Swagbot?
-</div>
-
-<div class="section">
-
-<div class="title">[ presence ]</div>
-
-steam: <a href="https://steamcommunity.com/id/4swag/">4swag</a>
-<br>
-discord: 4swag
-<br>
-telegram: Coming soon...
-
-<div class="line"></div>
-
-
-</span>
-
-</div>
-<div class="section">
-
-<div class="title">[ radio ]</div>
-
-<div class="radioinfo">
-swagbot  — playlist
-</div>
-
-<iframe
-style="border-radius:12px"
-src="https://open.spotify.com/embed/playlist/3JhcwRx5mZJkmUkyaJDCSr"
-width="100%"
-height="352"
-frameborder="0"
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-loading="lazy">
-</iframe>
-<span class="small">
-swagbot.dev
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div id="player"></div>
-
-</div>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
