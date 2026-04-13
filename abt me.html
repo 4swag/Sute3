@@ -3,69 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>swagbot.dev // Console Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body data-theme="info">
-  <div class="bg-layer" aria-hidden="true"></div>
+  <title>SwagBot — Underground Profile</title>
+    <link rel="stylesheet" href="style.css" />
 
-  <main class="dashboard" aria-label="Personal console dashboard">
-    <header class="topbar glass">
-      <div>
-        <p class="system-label">USER PROFILE SYSTEM</p>
-        <h1>4swag // swagbot.dev</h1>
+</head>
+<body>
+  <main class="layout" aria-label="SwagBot personal profile">
+    <section class="ticker panel" aria-label="Scene ticker">
+      <div class="ticker-track">
+        <span>swagbot.dev // cs2 underground // lowkey loud // chrome era energy // code + crosshair discipline // </span>
+        <span>swagbot.dev // cs2 underground // lowkey loud // chrome era energy // code + crosshair discipline // </span>
       </div>
-      <p class="status-pill">STATUS: ONLINE · CS2 SESSION READY</p>
+    </section>
+
+    <header class="panel hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <p class="eyebrow">underground profile / 4swag</p>
+      <h1>SwagBot</h1>
+      <p>
+        Personal corner for CS2 scene presence, late-night sessions, and a 90s–00s influence stack.
+        Dark chrome mood. Zero corporate energy. Pure underground intent.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-accent" href="https://discord.gg/refunded" target="_blank" rel="noopener noreferrer">Join Discord</a>
+        <a class="btn" href="https://steamcommunity.com/id/4swag/" target="_blank" rel="noopener noreferrer">Steam Profile</a>
+      </div>
     </header>
 
-    <section class="menu-wrap" aria-label="Main dashboard sections">
-      <div id="tileRail" class="tile-rail" role="tablist" aria-label="Console menu rail">
-        <button class="tile is-active" role="tab" data-key="info" aria-selected="true">
-          <span class="tile-kicker">01</span>
-          <span class="tile-title">Info</span>
-          <span class="tile-sub">identity + vibe</span>
-        </button>
-        <button class="tile" role="tab" data-key="links" aria-selected="false">
-          <span class="tile-kicker">02</span>
-          <span class="tile-title">Links</span>
-          <span class="tile-sub">where to tap in</span>
-        </button>
-        <button class="tile" role="tab" data-key="music" aria-selected="false">
-          <span class="tile-kicker">03</span>
-          <span class="tile-title">Music</span>
-          <span class="tile-sub">rotation + influence</span>
-        </button>
-        <button class="tile" role="tab" data-key="presence" aria-selected="false">
-          <span class="tile-kicker">04</span>
-          <span class="tile-title">Presence</span>
-          <span class="tile-sub">handles + scene</span>
-        </button>
-        <button class="tile" role="tab" data-key="favorites" aria-selected="false">
-          <span class="tile-kicker">05</span>
-          <span class="tile-title">Favorites</span>
-          <span class="tile-sub">games + phrases</span>
-        </button>
-        <button class="tile" role="tab" data-key="underground" aria-selected="false">
-          <span class="tile-kicker">06</span>
-          <span class="tile-title">Scene / Underground</span>
-          <span class="tile-sub">coded language</span>
-        </button>
-      </div>
+    <section class="grid" aria-label="Main profile sections">
+      <article class="panel section">
+        <h2>About / Presence</h2>
+        <p class="about-copy">
+          4swag. CS2 HvH mindset. Built for pressure rounds and quiet confidence.
+          If you know the scene, you catch the signal quick: no loud flex, just clean impact.
+        </p>
+        <p class="about-copy">
+          Style language: moody, sharp, underground. Think forum-era rare tags, lobby whispers,
+          and late-run playlists cutting through smoke.
+        </p>
+        <div class="scene-tags" aria-label="identity tags">
+          <span class="tag">hvh</span>
+          <span class="tag">cs2</span>
+          <span class="tag">underground</span>
+          <span class="tag">rare</span>
+        </div>
+
+        <div class="cheat-grid" aria-label="Tools in use">
+          <div class="cheat-item">refunded.vip</div>
+          <div class="cheat-item">Fatality</div>
+          <div class="cheat-item">Hardline</div>
+          <div class="cheat-item">Neverlose</div>
+          <div class="cheat-item">Memesense</div>
+        </div>
+      </article>
+
+      <article class="panel section">
+        <h2>Links / Contact</h2>
+        <div class="links">
+          <a class="link-card" href="https://discord.gg/refunded" target="_blank" rel="noopener noreferrer">
+            <span class="link-label">Discord — refunded</span>
+            <span class="link-meta">primary</span>
+          </a>
+          <a class="link-card" href="https://steamcommunity.com/id/4swag/" target="_blank" rel="noopener noreferrer">
+            <span class="link-label">Steam — 4swag</span>
+            <span class="link-meta">active</span>
+          </a>
+          <a class="link-card" href="#influences">
+            <span class="link-label">Music Influences</span>
+            <span class="link-meta">scroll</span>
+          </a>
+        </div>
+      </article>
     </section>
 
-    <section class="detail-panel glass" aria-live="polite">
-      <p id="detailLabel" class="detail-label">INFO MODULE</p>
-      <h2 id="detailTitle">4swag / personal signal</h2>
-      <p id="detailCopy" class="detail-copy"></p>
-      <div id="detailItems" class="detail-items"></div>
+    <section id="influences" class="panel section" aria-label="music influences">
+      <h2>Influences / Now in rotation</h2>
+      <ul class="influences-list">
+        <li>Memphis shadows, hypnotic loops, and raw tape-era grit.</li>
+        <li>Wu-Tang atmosphere: martial calm, coded language, steel focus.</li>
+        <li>Late-night mixes that hit like tunnel reverb and city rain.</li>
+      </ul>
+      <p class="about-copy" style="margin-top: 12px; color: #b7c2dd;">
+        Current mood: chrome threads, dark rooms, and bass-heavy classics from the 90s to early 00s.
+      </p>
     </section>
 
-    <footer class="footer glass">
-      <p>NAV: ← / → to move • Enter to open links • Esc to reset</p>
-      <p id="footerStamp">swagbot.dev // custom dashboard</p>
+    <footer class="panel footer">
+      swagbot.dev // old-web spirit, modern polish
     </footer>
   </main>
-
   <script src="script.js"></script>
 </body>
 </html>
